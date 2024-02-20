@@ -8,22 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		5D7BBA9D2B844B3F00ED6995 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7BBA9C2B844B3F00ED6995 /* AppDelegate.swift */; };
-		5D7BBA9F2B844B3F00ED6995 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7BBA9E2B844B3F00ED6995 /* SceneDelegate.swift */; };
-		5D7BBAA12B844B3F00ED6995 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7BBAA02B844B3F00ED6995 /* ViewController.swift */; };
-		5D7BBAA42B844B3F00ED6995 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D7BBAA22B844B3F00ED6995 /* Main.storyboard */; };
 		5D7BBAA62B844B4000ED6995 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D7BBAA52B844B4000ED6995 /* Assets.xcassets */; };
 		5D7BBAA92B844B4000ED6995 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D7BBAA72B844B4000ED6995 /* LaunchScreen.storyboard */; };
+		5D7BBAB32B84506600ED6995 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5D7BBAB22B84506600ED6995 /* Alamofire */; };
+		5D7BBAB62B84508900ED6995 /* ObjectMapper in Frameworks */ = {isa = PBXBuildFile; productRef = 5D7BBAB52B84508900ED6995 /* ObjectMapper */; };
+		5D7BBAB92B8450B800ED6995 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 5D7BBAB82B8450B800ED6995 /* SDWebImage */; };
+		5D7BBABB2B8450B800ED6995 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5D7BBABA2B8450B800ED6995 /* SDWebImageMapKit */; };
+		5D7BBABF2B84511C00ED6995 /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7BBABE2B84511C00ED6995 /* Assembler.swift */; };
+		5D7BBAC12B84516000ED6995 /* AuthAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7BBAC02B84516000ED6995 /* AuthAssembler.swift */; };
+		5D7BBAC52B8451A700ED6995 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7BBAC42B8451A700ED6995 /* AuthViewController.swift */; };
+		5D7BBAD02B84551100ED6995 /* MovieDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7BBACF2B84551100ED6995 /* MovieDataSource.swift */; };
+		5D7BBAD22B84552A00ED6995 /* UserDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7BBAD12B84552A00ED6995 /* UserDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5D7BBA992B844B3F00ED6995 /* MyMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D7BBA9C2B844B3F00ED6995 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5D7BBA9E2B844B3F00ED6995 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5D7BBAA02B844B3F00ED6995 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5D7BBAA32B844B3F00ED6995 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5D7BBAA52B844B4000ED6995 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D7BBAA82B844B4000ED6995 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D7BBAAA2B844B4000ED6995 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D7BBABE2B84511C00ED6995 /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
+		5D7BBAC02B84516000ED6995 /* AuthAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAssembler.swift; sourceTree = "<group>"; };
+		5D7BBAC42B8451A700ED6995 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		5D7BBACF2B84551100ED6995 /* MovieDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDataSource.swift; sourceTree = "<group>"; };
+		5D7BBAD12B84552A00ED6995 /* UserDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D7BBAB92B8450B800ED6995 /* SDWebImage in Frameworks */,
+				5D7BBAB62B84508900ED6995 /* ObjectMapper in Frameworks */,
+				5D7BBABB2B8450B800ED6995 /* SDWebImageMapKit in Frameworks */,
+				5D7BBAB32B84506600ED6995 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +68,145 @@
 		5D7BBA9B2B844B3F00ED6995 /* MyMovie */ = {
 			isa = PBXGroup;
 			children = (
-				5D7BBA9C2B844B3F00ED6995 /* AppDelegate.swift */,
-				5D7BBA9E2B844B3F00ED6995 /* SceneDelegate.swift */,
-				5D7BBAA02B844B3F00ED6995 /* ViewController.swift */,
-				5D7BBAA22B844B3F00ED6995 /* Main.storyboard */,
-				5D7BBAA52B844B4000ED6995 /* Assets.xcassets */,
-				5D7BBAA72B844B4000ED6995 /* LaunchScreen.storyboard */,
-				5D7BBAAA2B844B4000ED6995 /* Info.plist */,
+				5D7BBABC2B8450E000ED6995 /* App */,
+				5D7BBAC22B84517C00ED6995 /* Module */,
+				5D7BBAC82B8452DC00ED6995 /* Core */,
 			);
 			path = MyMovie;
+			sourceTree = "<group>";
+		};
+		5D7BBAB02B844F2200ED6995 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5D7BBA9C2B844B3F00ED6995 /* AppDelegate.swift */,
+				5D7BBAA72B844B4000ED6995 /* LaunchScreen.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		5D7BBABC2B8450E000ED6995 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5D7BBAB02B844F2200ED6995 /* Main */,
+				5D7BBABD2B8450E700ED6995 /* Dependecy */,
+				5D7BBAC72B84527400ED6995 /* Resource */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		5D7BBABD2B8450E700ED6995 /* Dependecy */ = {
+			isa = PBXGroup;
+			children = (
+				5D7BBABE2B84511C00ED6995 /* Assembler.swift */,
+				5D7BBAC02B84516000ED6995 /* AuthAssembler.swift */,
+			);
+			path = Dependecy;
+			sourceTree = "<group>";
+		};
+		5D7BBAC22B84517C00ED6995 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				5D7BBAC32B84519700ED6995 /* Auth */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		5D7BBAC32B84519700ED6995 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				5D7BBAC62B8451C700ED6995 /* View */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		5D7BBAC62B8451C700ED6995 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5D7BBAC42B8451A700ED6995 /* AuthViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5D7BBAC72B84527400ED6995 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				5D7BBAA52B844B4000ED6995 /* Assets.xcassets */,
+				5D7BBAAA2B844B4000ED6995 /* Info.plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		5D7BBAC82B8452DC00ED6995 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				5D7BBACA2B84535400ED6995 /* Domain */,
+				5D7BBAC92B84535000ED6995 /* Data */,
+				5D7BBACB2B84535F00ED6995 /* Utils */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		5D7BBAC92B84535000ED6995 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5D7BBACC2B84536400ED6995 /* DataSource */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		5D7BBACA2B84535400ED6995 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				5D7BBACE2B84537B00ED6995 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		5D7BBACB2B84535F00ED6995 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		5D7BBACC2B84536400ED6995 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				5D7BBACD2B84536F00ED6995 /* Remote */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		5D7BBACD2B84536F00ED6995 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				5D7BBACF2B84551100ED6995 /* MovieDataSource.swift */,
+				5D7BBAD12B84552A00ED6995 /* UserDataSource.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		5D7BBACE2B84537B00ED6995 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5D7BBAD42B84578B00ED6995 /* User */,
+				5D7BBAD32B84578700ED6995 /* Movie */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5D7BBAD32B84578700ED6995 /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Movie;
+			sourceTree = "<group>";
+		};
+		5D7BBAD42B84578B00ED6995 /* User */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +225,12 @@
 			dependencies = (
 			);
 			name = MyMovie;
+			packageProductDependencies = (
+				5D7BBAB22B84506600ED6995 /* Alamofire */,
+				5D7BBAB52B84508900ED6995 /* ObjectMapper */,
+				5D7BBAB82B8450B800ED6995 /* SDWebImage */,
+				5D7BBABA2B8450B800ED6995 /* SDWebImageMapKit */,
+			);
 			productName = MyMovie;
 			productReference = 5D7BBA992B844B3F00ED6995 /* MyMovie.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +259,11 @@
 				Base,
 			);
 			mainGroup = 5D7BBA902B844B3F00ED6995;
+			packageReferences = (
+				5D7BBAB12B84506600ED6995 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				5D7BBAB42B84508900ED6995 /* XCRemoteSwiftPackageReference "ObjectMapper" */,
+				5D7BBAB72B8450B800ED6995 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 5D7BBA9A2B844B3F00ED6995 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +280,6 @@
 			files = (
 				5D7BBAA92B844B4000ED6995 /* LaunchScreen.storyboard in Resources */,
 				5D7BBAA62B844B4000ED6995 /* Assets.xcassets in Resources */,
-				5D7BBAA42B844B3F00ED6995 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +290,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D7BBAA12B844B3F00ED6995 /* ViewController.swift in Sources */,
+				5D7BBAD02B84551100ED6995 /* MovieDataSource.swift in Sources */,
+				5D7BBABF2B84511C00ED6995 /* Assembler.swift in Sources */,
+				5D7BBAC52B8451A700ED6995 /* AuthViewController.swift in Sources */,
+				5D7BBAC12B84516000ED6995 /* AuthAssembler.swift in Sources */,
 				5D7BBA9D2B844B3F00ED6995 /* AppDelegate.swift in Sources */,
-				5D7BBA9F2B844B3F00ED6995 /* SceneDelegate.swift in Sources */,
+				5D7BBAD22B84552A00ED6995 /* UserDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5D7BBAA22B844B3F00ED6995 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5D7BBAA32B844B3F00ED6995 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5D7BBAA72B844B4000ED6995 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -295,11 +442,11 @@
 				DEVELOPMENT_TEAM = 3HH926728D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyMovie/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,11 +470,11 @@
 				DEVELOPMENT_TEAM = 3HH926728D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyMovie/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -363,6 +510,56 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5D7BBAB12B84506600ED6995 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.1;
+			};
+		};
+		5D7BBAB42B84508900ED6995 /* XCRemoteSwiftPackageReference "ObjectMapper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tristanhimmelman/ObjectMapper.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.0;
+			};
+		};
+		5D7BBAB72B8450B800ED6995 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.18.11;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5D7BBAB22B84506600ED6995 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D7BBAB12B84506600ED6995 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		5D7BBAB52B84508900ED6995 /* ObjectMapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D7BBAB42B84508900ED6995 /* XCRemoteSwiftPackageReference "ObjectMapper" */;
+			productName = ObjectMapper;
+		};
+		5D7BBAB82B8450B800ED6995 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D7BBAB72B8450B800ED6995 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		5D7BBABA2B8450B800ED6995 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D7BBAB72B8450B800ED6995 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5D7BBA912B844B3F00ED6995 /* Project object */;
 }
