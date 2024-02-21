@@ -12,14 +12,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     let assembler: Assembler = AppAssembler.shared
     var window: UIWindow?
-
+    var vc: UIViewController?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        let authVC: AuthViewController = assembler.resolve()
+        
+        let authUseCase: AuthUseCase = assembler.resolve()
+        
+        authUseCase.checkAuthUser { isLoggedIn in
+            if isLoggedIn {
+                let homeVC: HomeViewController = self.assembler.resolve()
+                self.vc = homeVC
+            } else {
+                let authVC: AuthViewController = self.assembler.resolve()
+                self.vc = authVC
+            }
+        }
+        
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = authVC
+        window?.rootViewController = vc
         window?.makeKeyAndVisible()
         return true
+    }
+    
+    func routeToHome() {
+        let homeVC: HomeViewController = assembler.resolve() // Your main application view controller
+        self.window?.rootViewController = homeVC
     }
 
 }

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthViewController" customModule="MyMovie" customModuleProvider="target">
+            <connections>
+                <outlet property="passwordTxtField" destination="sI3-fV-zmb" id="F0k-Wn-9dh"/>
+                <outlet property="signInBtn" destination="0ur-DU-8ld" id="vln-Gw-2Rn"/>
+                <outlet property="usernameTxtField" destination="t8a-T3-z0r" id="3Ve-Uf-CJJ"/>
+                <outlet property="view" destination="iN0-l3-epB" id="cVG-us-ewM"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-image" translatesAutoresizingMaskIntoConstraints="NO" id="eam-Op-PMW">
+                    <rect key="frame" x="0.0" y="59" width="393" height="314.33333333333331"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="eam-Op-PMW" secondAttribute="height" multiplier="1:0.8" id="YgR-ho-I7F"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1C-Xw-wGc">
+                    <rect key="frame" x="10" y="383.33333333333331" width="373" height="30.666666666666686"/>
+                    <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="25"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can sign in with your theMovieDB account" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C9r-D1-ATd">
+                    <rect key="frame" x="30" y="424" width="333" height="44.333333333333314"/>
+                    <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="18"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="79h-bZ-ZeK">
+                    <rect key="frame" x="25" y="488.33333333333326" width="343" height="139"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t8a-T3-z0r">
+                            <rect key="frame" x="0.0" y="0.0" width="343" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sI3-fV-zmb">
+                            <rect key="frame" x="0.0" y="52.000000000000057" width="343" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ur-DU-8ld">
+                            <rect key="frame" x="0.0" y="104.00000000000006" width="343" height="35"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled">
+                                <attributedString key="attributedTitle">
+                                    <fragment content="Sign In">
+                                        <attributes>
+                                            <font key="NSFont" size="18" name="SFProDisplay-Heavy"/>
+                                            <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <color key="baseBackgroundColor" red="0.18039217590000001" green="0.36470589040000001" blue="0.56862747670000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </buttonConfiguration>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" name="BackgroundColor"/>
+            <constraints>
+                <constraint firstItem="eam-Op-PMW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Alo-pi-oQ5"/>
+                <constraint firstItem="79h-bZ-ZeK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="Bma-qJ-GGu"/>
+                <constraint firstItem="v1C-Xw-wGc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="Gte-tQ-wMm"/>
+                <constraint firstItem="C9r-D1-ATd" firstAttribute="top" secondItem="v1C-Xw-wGc" secondAttribute="bottom" constant="10" id="MWs-8L-GP6"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="eam-Op-PMW" secondAttribute="trailing" id="O9o-dN-gB0"/>
+                <constraint firstItem="79h-bZ-ZeK" firstAttribute="top" secondItem="C9r-D1-ATd" secondAttribute="bottom" constant="20" id="QKM-zy-hJJ"/>
+                <constraint firstItem="eam-Op-PMW" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="SB0-S6-gJV"/>
+                <constraint firstItem="C9r-D1-ATd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="eoD-Du-lCJ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="v1C-Xw-wGc" secondAttribute="trailing" constant="10" id="hOm-HR-iT9"/>
+                <constraint firstItem="v1C-Xw-wGc" firstAttribute="top" secondItem="eam-Op-PMW" secondAttribute="bottom" constant="10" id="jBE-RF-jHV"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="79h-bZ-ZeK" secondAttribute="trailing" constant="25" id="mAq-aE-tzW"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="C9r-D1-ATd" secondAttribute="trailing" constant="30" id="mcZ-v8-9RJ"/>
+            </constraints>
+            <point key="canvasLocation" x="36" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="login-image" width="869.99993896484375" height="520.1385498046875"/>
+        <namedColor name="BackgroundColor">
+            <color red="0.071773524818311243" green="0.096472537878787845" blue="0.0028272865877648386" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

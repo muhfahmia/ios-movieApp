@@ -10,10 +10,30 @@ import UIKit
 
 protocol AuthAssembler {
     func resolve() -> AuthViewController
+    func resolve() -> AuthViewModel
+    func resolve() -> AuthUseCase
+    func resolve() -> UserRepository
+    func resolve() -> UserDataSource
 }
 
 extension AuthAssembler where Self: Assembler {
     func resolve() -> AuthViewController {
-        AuthViewController()
+        AuthViewController(vm: resolve())
+    }
+    
+    func resolve() -> AuthViewModel {
+        AuthViewModel(authUseCase: resolve())
+    }
+    
+    func resolve() -> AuthUseCase {
+        AuthInteractor(repository: resolve())
+    }
+    
+    func resolve() -> UserRepository {
+        DefaultUserRepository(dataSource: resolve())
+    }
+    
+    func resolve() -> UserDataSource {
+        DefaultUserDataSource()
     }
 }
