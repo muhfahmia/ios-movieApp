@@ -21,10 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         authUseCase.checkAuthUser { isLoggedIn in
             if isLoggedIn {
                 let homeVC: HomeViewController = self.assembler.resolve()
-                self.vc = homeVC
+                self.vc = UINavigationController(rootViewController: homeVC)
             } else {
                 let authVC: AuthViewController = self.assembler.resolve()
-                self.vc = authVC
+                self.vc = UINavigationController(rootViewController: authVC)
             }
         }
         
@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func routeToHome() {
         let homeVC: HomeViewController = assembler.resolve() // Your main application view controller
-        self.window?.rootViewController = homeVC
+        self.window?.rootViewController = UINavigationController(rootViewController: homeVC)
     }
 
 }

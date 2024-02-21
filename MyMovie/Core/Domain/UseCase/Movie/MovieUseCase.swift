@@ -1,5 +1,5 @@
 //
-//  MovieDataSource.swift
+//  MovieListUseCase.swift
 //  MyMovie
 //
 //  Created by Muh Fahmi Ardiyanto on 21/02/24.
@@ -7,21 +7,25 @@
 
 import Foundation
 
-protocol MovieDataSource {
+protocol MovieUseCase {
     func list(param: MovieListParameter, completion: @escaping(Result<MoviesModel, Error>) -> Void)
     func detail(param: MovieDetailParameter, completion: @escaping(Result<MovieModel, Error>) -> Void)
 }
 
-struct DefaultMovieDataSource: MovieDataSource {
+struct MovieInteractor: MovieUseCase {
     
-    let network: NetworkService = NetworkService.shared
+    private let repository: MovieRepository
+    
+    init(repository: MovieRepository) {
+        self.repository = repository
+    }
     
     func list(param: MovieListParameter, completion: @escaping (Result<MoviesModel, Error>) -> Void) {
-        network.request(baseAPI: MovieAPI.list(param: param), responseType: MoviesModel.self) { completion($0) }
+        repository.list(param: param) { completion($0) }
     }
     
     func detail(param: MovieDetailParameter, completion: @escaping (Result<MovieModel, Error>) -> Void) {
-        network.request(baseAPI: MovieAPI.detail(param: param), responseType: MovieModel.self) { completion($0) }
+        repository.detail(param: param) { completion($0) }
     }
     
 }

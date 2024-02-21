@@ -11,6 +11,8 @@ import Alamofire
 enum MovieAPI {
     case getUserToken
     case authUser(param: UserParameter)
+    case list(param: MovieListParameter)
+    case detail(param: MovieDetailParameter)
 }
 
 extension MovieAPI: APIFactory {
@@ -25,6 +27,14 @@ extension MovieAPI: APIFactory {
             return "authentication/token/new"
         case .authUser(_):
             return "authentication/token/validate_with_login"
+        case .list(let param):
+            if param.pathType == .trending {
+                return "trending/all/week"
+            } else {
+                return "movie/\(param.pathType.rawValue)"
+            }
+        case .detail(let param):
+            return "movie/\(param.movieID)"
         }
     }
     
@@ -34,6 +44,10 @@ extension MovieAPI: APIFactory {
             return .get
         case .authUser(_):
             return .post
+        case .list(_):
+            return .get
+        case .detail(_):
+            return .get
         }
     }
     
@@ -46,6 +60,10 @@ extension MovieAPI: APIFactory {
         case .getUserToken:
             return ["api_key": Constants.apiKey]
         case .authUser(let param):
+            return param
+        case .list(let param):
+            return param
+        case .detail(let param):
             return param
         }
     }

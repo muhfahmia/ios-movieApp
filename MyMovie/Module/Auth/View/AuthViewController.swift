@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import SVProgressHUD
 
-class AuthViewController: UIViewController {
+class AuthViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var usernameTxtField: UITextField!
     @IBOutlet weak var passwordTxtField: UITextField!
@@ -33,6 +33,8 @@ class AuthViewController: UIViewController {
     
     private func setupView() {
         signInBtn.addTarget(self, action: #selector(signInSubmit), for: .touchUpInside)
+        usernameTxtField.delegate = self
+        passwordTxtField.delegate = self
     }
     
     @objc func signInSubmit() {
@@ -64,6 +66,12 @@ class AuthViewController: UIViewController {
                 SVProgressHUD.dismiss()
             }
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // Dismiss the keyboard when return key is pressed
+        textField.resignFirstResponder()
+        return true
     }
     
 }

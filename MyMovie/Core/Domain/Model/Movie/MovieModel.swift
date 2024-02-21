@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Movie {
+struct MovieModel {
     var ranking: Int = 0
     var movieID: Int = 0
     var title: String = ""
@@ -23,7 +23,7 @@ struct Movie {
 }
 
 
-struct Movies {
+struct MoviesModel {
     var page: Int = 0
-    var movies: [Movie] = []
+    var movies: [MovieModel] = []
 }
