@@ -24,8 +24,13 @@ class HomeViewModel {
             guard let self = self else { return }
             switch result {
             case .success(let moviesModel):
-                self.movieTrending = moviesModel.movies
-                completion(self.movieTrending)
+                if param.pathType == .trending {
+                    self.movieTrending = moviesModel.movies
+                    completion(self.movieTrending)
+                } else {
+                    self.movieNowPlaying = moviesModel.movies
+                    completion(self.movieNowPlaying)
+                }
             case .failure(let error):
                 print("getListMovieError: \(error)")
             }

@@ -11,15 +11,16 @@ import UIKit
 class ResponsiveGridLayout: UICollectionViewFlowLayout {
     
     // Minimum column width for each item
-    var minColumnWidth: CGFloat = 0
+    var minColumnWidth: CGFloat = 150
     
     // Minimum inter-item spacing
-    var miniInteritemSpacing: CGFloat = 0
+    var miniInteritemSpacing: CGFloat = 10
+    
+    var minLineSpacing: CGFloat = 14
     
     var cellHeightRatio: CGFloat = 1
     
-    init(minColumnWidth: CGFloat = 150, miniInteritemSpacing: CGFloat = 10, cellHeightRatio: CGFloat = 1) {
-        self.minColumnWidth = minColumnWidth
+    init(miniInteritemSpacing: CGFloat = 10, cellHeightRatio: CGFloat = 1) {
         self.miniInteritemSpacing = miniInteritemSpacing
         self.cellHeightRatio = cellHeightRatio
         super.init()
@@ -47,7 +48,7 @@ class ResponsiveGridLayout: UICollectionViewFlowLayout {
         itemSize = CGSize(width: cellWidth, height: cellHeight) // Assuming square cells
         
         // Set minimum line spacing (vertical spacing between rows)
-        minimumLineSpacing = miniInteritemSpacing
+        minimumLineSpacing = minLineSpacing
         
         // Set minimum inter-item spacing (horizontal spacing between cells)
         minimumInteritemSpacing = miniInteritemSpacing

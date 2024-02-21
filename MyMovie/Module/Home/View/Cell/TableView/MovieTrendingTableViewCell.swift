@@ -29,7 +29,7 @@ class MovieTrendingTableViewCell: UITableViewCell, UICollectionViewDataSource, U
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.showsHorizontalScrollIndicator = false
         cv.isPagingEnabled = true
-        cv.register(nibWithCellClass: MovieCardCollectionViewCell.self)
+        cv.register(nibWithCellClass: MovieBannerCardCollectionViewCell.self)
         return cv
     }()
     
@@ -67,7 +67,7 @@ class MovieTrendingTableViewCell: UITableViewCell, UICollectionViewDataSource, U
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: MovieCardCollectionViewCell = collectionView.dequeueReusableCell(withClass: MovieCardCollectionViewCell.self, for: indexPath)
+        let cell: MovieBannerCardCollectionViewCell = collectionView.dequeueReusableCell(withClass: MovieBannerCardCollectionViewCell.self, for: indexPath)
         if let movies = movies {
             let movie = movies[indexPath.row]
             cell.setMovieData(movie: movie)

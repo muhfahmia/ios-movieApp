@@ -13,6 +13,7 @@ class HomeViewController: UIViewController, UITableViewDataSource {
         case trendingTitle
         case trendingCV
         case nowPlayingTitle
+        case nowPlayingCV
     }
     
     @IBOutlet weak var homeTblView: UITableView!
@@ -24,7 +25,6 @@ class HomeViewController: UIViewController, UITableViewDataSource {
         viewModel = vm
         router = route
         super.init(nibName: String(describing: HomeViewController.self), bundle: nil)
-        
     }
     
     required init?(coder: NSCoder) {
@@ -41,6 +41,7 @@ class HomeViewController: UIViewController, UITableViewDataSource {
         homeTblView.dataSource = self
         homeTblView.register(cellWithClass: MovieTrendingTableViewCell.self)
         homeTblView.register(cellWithClass: TitleSectionTableViewCell.self)
+        homeTblView.register(cellWithClass: MovieListTableViewCell.self)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -69,6 +70,17 @@ class HomeViewController: UIViewController, UITableViewDataSource {
         } else if section == .nowPlayingTitle {
             let cell: TitleSectionTableViewCell = tableView.dequeueReusableCell(withClass: TitleSectionTableViewCell.self)
             cell.titleLabel.text = "Now Playing"
+            return cell
+        } else if section == .nowPlayingCV {
+            let cell: MovieListTableViewCell = tableView.dequeueReusableCell(withClass: MovieListTableViewCell.self)
+            cell.movieSelected = { [weak self] index in
+                guard let self = self else { return }
+                let movieID = String(self.viewModel.movieNowPlaying[index].movieID)
+                self.router.routeToDetail(movieID: movieID, vc: self)
+            }
+            viewModel.getMovieList(param: viewModel.movieNowPlayingParam) { movies in
+                cell.movies = movies
+            }
             return cell
         }
         return UITableViewCell()
