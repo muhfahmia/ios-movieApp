@@ -33,4 +33,39 @@ extension UICollectionView {
         return cell
     }
     
+    func calculateHeightContent(column: Int, heightRatio: CGFloat, totalItem: Int, spacing: CGFloat) -> CGSize {
+        let totalRow = totalItem / column
+        let heightItem = ((self.bounds.width / CGFloat(column)) * heightRatio) + spacing
+        print("totalRow: \(totalRow)")
+        print("heightItem: \(heightItem)")
+        let totalHeight = heightItem * CGFloat(totalRow)
+        self.contentSize = CGSize(width: self.bounds.width, height: totalHeight)
+        return self.contentSize
+    }
+    
+    func calcHeightContent(itemCount: Int) -> CGSize {
+        guard let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout else {
+                return CGSize(width: bounds.width, height: 0)
+        }
+            
+        let sectionInsets = flowLayout.sectionInset
+        let minimumLineSpacing = flowLayout.minimumLineSpacing
+        let minimumInteritemSpacing = flowLayout.minimumInteritemSpacing
+        let collectionViewWidth = bounds.width - sectionInsets.left - sectionInsets.right
+        
+        // Calculate the width available for the items, considering the insets
+        let availableWidthForItems = collectionViewWidth - minimumInteritemSpacing * CGFloat(flowLayout.minimumInteritemSpacing)
+        
+        // Calculate the total height of all items
+        let totalItemsHeight = CGFloat(itemCount) * flowLayout.itemSize.height
+        
+        // Calculate the total spacing between items
+        let totalInteritemSpacing = CGFloat(itemCount - 1) * minimumInteritemSpacing
+        
+        // Calculate the content height
+        let contentHeight = totalItemsHeight + totalInteritemSpacing + sectionInsets.top + sectionInsets.bottom
+            
+        return CGSize(width: bounds.width, height: contentHeight)
+    }
+    
 }

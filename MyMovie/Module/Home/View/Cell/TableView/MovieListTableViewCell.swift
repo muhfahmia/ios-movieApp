@@ -12,6 +12,7 @@ class MovieListTableViewCell: UITableViewCell, UICollectionViewDataSource, UICol
     
     let UIBounds = UIScreen.main.bounds
     var movieSelected: ((Int) -> Void)?
+    var movieListCVHeight: CGFloat?
     
     var movies: ([MovieModel])? {
         didSet {
@@ -22,22 +23,20 @@ class MovieListTableViewCell: UITableViewCell, UICollectionViewDataSource, UICol
     lazy var movieListCV: UICollectionView = {
         let layout: UICollectionViewFlowLayout = ResponsiveGridLayout(cellHeightRatio: 1.6)
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.showsVerticalScrollIndicator = false
-        cv.isScrollEnabled = false
         cv.register(nibWithCellClass: MovieCardCollectionViewCell.self)
         return cv
     }()
     
     override func systemLayoutSizeFitting(_ targetSize: CGSize, withHorizontalFittingPriority horizontalFittingPriority: UILayoutPriority, verticalFittingPriority: UILayoutPriority) -> CGSize {
         self.layoutIfNeeded()
-        movieListCV.layoutIfNeeded()
-        return movieListCV.contentSize
+        return movieListCV.calculateHeightContent(column: 2, heightRatio: 1.6, totalItem: 20, spacing: 14)
     }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupView()
     }
+    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -58,7 +57,7 @@ class MovieListTableViewCell: UITableViewCell, UICollectionViewDataSource, UICol
         if let movies = movies {
             return movies.count
         } else {
-            return 20
+            return 0
         }
     }
     
