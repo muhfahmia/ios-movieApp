@@ -24,6 +24,7 @@ class MovieListTableViewCell: UITableViewCell, UICollectionViewDataSource, UICol
         let layout: UICollectionViewFlowLayout = ResponsiveGridLayout(cellHeightRatio: 1.6)
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.register(nibWithCellClass: MovieCardCollectionViewCell.self)
+        cv.showsVerticalScrollIndicator = false
         return cv
     }()
     
@@ -46,7 +47,7 @@ class MovieListTableViewCell: UITableViewCell, UICollectionViewDataSource, UICol
         contentView.addSubview(movieListCV)
         movieListCV.dataSource = self
         movieListCV.delegate = self
-        movieListCV.anchor(top: contentView.topAnchor, left: contentView.leftAnchor, bottom: contentView.bottomAnchor, right: contentView.rightAnchor, leftConstant: 12, rightConstant: 12)
+        movieListCV.anchor(top: contentView.topAnchor, left: contentView.leftAnchor, bottom: contentView.bottomAnchor, right: contentView.rightAnchor, leftConstant: 10, rightConstant: 10)
     }
     
     func reloadCV() {

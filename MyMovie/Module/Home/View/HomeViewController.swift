@@ -39,6 +39,7 @@ class HomeViewController: UIViewController, UITableViewDataSource {
     
     private func setupView() {
         homeTblView.dataSource = self
+        homeTblView.showsVerticalScrollIndicator = false
         homeTblView.register(cellWithClass: MovieTrendingTableViewCell.self)
         homeTblView.register(cellWithClass: TitleSectionTableViewCell.self)
         homeTblView.register(cellWithClass: MovieListTableViewCell.self)
